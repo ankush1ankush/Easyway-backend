@@ -45,7 +45,10 @@ main().catch(err=>console.log(err));
 async function main()
 {
 
-    await mongoose.connect('mongodb://127.0.0.1:27017/TestDb',{useNewUrlParser:true});
+    const uri = "mongodb+srv://2040119:wEvcl0acomVdcdxH@cluster0.g2jge43.mongodb.net/?retryWrites=true&w=majority";
+// Create a MongoClient with a MongoClientOptions object to set the Stable API version
+
+    await mongoose.connect(uri,{useNewUrlParser:true});
     const userNote= new mongoose.Schema({
         title: String,
         content: String,
