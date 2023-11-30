@@ -45,7 +45,7 @@ main().catch(err=>console.log(err));
 async function main()
 {
 
-    const uri = "mongodb+srv://2040119:wEvcl0acomVdcdxH@cluster0.g2jge43.mongodb.net/?retryWrites=true&w=majority";
+    const uri = process.env.MONGO_URI;
 // Create a MongoClient with a MongoClientOptions object to set the Stable API version
 
     await mongoose.connect(uri,{useNewUrlParser:true});
