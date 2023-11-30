@@ -32,7 +32,7 @@ app.use(session({
 
   app.use(
 	cors({
-		origin: `${process.env.BASE_URL}`,
+		origin: `${process.env.FRONT_URL}`,
 		methods: "GET,POST,PUT,DELETE",
 		credentials: true,
 	})
